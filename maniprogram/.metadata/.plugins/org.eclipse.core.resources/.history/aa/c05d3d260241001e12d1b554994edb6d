@@ -1,0 +1,15 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Add_or_Even {
+	public static void main(String[] args) {
+		int arr[]= {1,9,3,5,4,6,7,8,2};
+		System.out.println(arr);
+		Arrays.sort(arr);
+		for(int i=0;i<=arr.length;i++)
+		{
+			int temp[];
+			
+		}
+	}
+}

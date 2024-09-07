@@ -1,0 +1,39 @@
+package complexity;
+
+public class Maxrep {
+public static void main(String[] args) {
+	String str="banana";
+	String taken="";
+	int count []=new int [str.length()];
+	for(int i=0;i<=str.length();i++) {
+		char ch=str.charAt(i);
+		if(taken.indexOf(ch)==-1) {
+			int countchar=0;
+			for(int j=0;j<=str.length();j++) {
+			char k=str.charAt(i);
+			if(ch==k) {
+				countchar++;
+			}
+			
+			}
+			taken+=ch;
+			count[i]=countchar;
+		}
+		else {
+			count[i]=-1;
+			
+		}
+	}
+	int max=maxcount(count);
+}
+  public static int maxcount(int arr[]) {
+	  int max=0;
+	  for(int i=0;i<arr.length;i++) {
+		  if(arr[i]>max) {
+			  max=arr[i];
+		  }
+	  }
+	  
+	  return max;
+  }
+}

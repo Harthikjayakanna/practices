@@ -1,0 +1,11 @@
+package DTO;
+
+public class Employee {
+	private String name;
+	private String id;
+	private long phone;
+	private String des;
+	private String email;
+	private double sal;
+
+}

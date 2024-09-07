@@ -1,0 +1,31 @@
+package Saturday30;
+
+import java.util.Scanner;
+
+public class SumOfPMbetweenNumbers {
+	static Scanner sc=new Scanner(System.in);
+	static void sumofprimenum(int n1,int n2) {
+		int sum=0;
+		for(int i=n1;i<=n2;i++) {
+			int count=0;
+			for(int j=1;j<=i;j++) {
+				if(i%j==0) {
+					count++;
+				}
+			}
+			if(count==2) {
+				sum+=i;
+				System.out.print(i+" ");
+			}
+		}
+		System.out.println(" ");
+		System.out.println("Sum of Prime number is "+sum);
+	}
+	public static void main(String[] args) {
+		System.err.println("Enter the 2 number where we get the sum of prime numbers");
+		int n1=sc.nextInt();
+		int n2=sc.nextInt();
+		sumofprimenum(n1,n2);
+	}
+
+}

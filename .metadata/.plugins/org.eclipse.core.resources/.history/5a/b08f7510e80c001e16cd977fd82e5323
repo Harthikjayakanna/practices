@@ -1,0 +1,36 @@
+package Challenge;
+
+import java.util.Scanner;
+
+public class taxi_price {
+	static int Price(int ans) {
+		int amnt = 20;
+		int n = 2;
+		int temp=0;
+		if (ans <= n) {
+			System.out.println("Ur total amount to pay is " + amnt);
+		} 
+		else if (ans > n && ans <= n + 2) {
+			for (int i = n + 1; i <= n + 2; i++) {
+				if (ans == i) {
+					amnt += 20;
+					
+					break;
+				}
+				amnt += 20;
+			}
+			temp =amnt;
+		}
+		return temp;
+		}
+    
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("How many kilometer u have traveled");
+		int ans = sc.nextInt();
+		int n=4;
+		if(ans<=n) {
+		    int amnt=Price(ans);
+		    System.out.println("Ur total amount to pay is " + amnt);
+	}
+}

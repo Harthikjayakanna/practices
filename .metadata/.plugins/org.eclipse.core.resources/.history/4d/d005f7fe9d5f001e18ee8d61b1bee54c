@@ -1,0 +1,38 @@
+package Saturday30;
+
+import java.util.Scanner;
+
+public class Armstrongbetweenranges {
+    static Scanner sc=new Scanner(System.in);
+    static int power(int n) {
+    	int c=0;
+    	while(n>0) {
+    		c++;
+    		n/=10;
+    	}
+    	return c;
+    }
+    static void armstrongrange(int n1,int n2) {
+    	for(int i=n1;i<=n2;i++) {
+    		int n=i;
+    		int temp=n;
+    		int sum=0;
+    		int power=power(n);
+    		while(n>0) {
+    			int last=n/10;
+    			int powerednum=1;
+    			for(int j=1;j<=power;j++) {
+    				powerednum*=last;
+    			}
+    			sum+=powerednum;
+    			n/=10;
+    		}
+    	}
+    }
+    public static void main(String[] args) {
+		System.out.println("enter the two number to find armstrong number between range");
+		int n1=sc.nextInt();
+		int n2=sc.nextInt();
+		armstrongrange(n1,n2);
+	}
+}

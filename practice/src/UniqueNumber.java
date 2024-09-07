@@ -1,0 +1,41 @@
+import java.util.HashSet;
+import java.util.Scanner;
+
+public class UniqueNumber {
+	static void Unique(int num) {
+	  int c=0;
+	  HashSet<Integer> uni=new HashSet<Integer>();
+	  while(num>0) {
+		  int last=num%10;
+		  uni.add(last);
+		  num/=10;
+		  c++;
+	  }
+	  if(c==uni.size())
+		  System.out.println("Unique number");
+	  else
+		  System.out.println("Not a unique number");
+	}
+	static void Uni(int num) {
+		String str=Integer.toString(num);
+		String temp="";
+		for(int i=0;i<str.length();i++) {
+			if(temp.indexOf(str.charAt(i))==-1){
+				temp+=str.charAt(i);
+			}
+			else {
+				System.out.println("Not a unique");
+			    return;
+		}}
+		System.out.println("Unique");
+	}
+	
+	public static void main(String[] args) {
+		Scanner sc =new Scanner(System.in);
+		System.out.println("Enter the Number");
+		int num=sc.nextInt();
+		Unique(num);
+		Uni(num);
+	}
+
+}

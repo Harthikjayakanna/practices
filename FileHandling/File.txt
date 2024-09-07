@@ -1,0 +1,53 @@
+public class Identify {
+	
+    public static ArrayList<Character> unique(String str) {
+        // Create a HashMap to store the frequency of each character
+        HashMap<Character, Integer> charCount = new HashMap<>();
+        for (int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
+            if (charCount.containsKey(c)) {
+                charCount.put(c, charCount.get(c) + 1);
+            } else {
+                charCount.put(c, 1);
+            }
+        }
+
+        // Create an ArrayList to store the unique characters
+        ArrayList<Character> uniqueChars = new ArrayList<>();
+        for (char c : charCount.keySet()) {
+            if (charCount.get(c) == 1) {
+                uniqueChars.add(c);
+            }
+        }
+
+        // Return the ArrayList of unique characters
+        return uniqueChars;
+    }
+
+    public static void main(String[] args) {
+        //get input from user using Scanner class
+    	Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the String");
+        String str = sc.next();
+        ArrayList<Character> result = unique(str);
+        System.out.println("The unique characters present in the string are: " + result);
+    
+  }
+}
+
+
+Output
+
+Enter the String
+hello
+The unique characters present in the string are: [e, h, o]
+
+
+Enter the String
+aaaabbbcl
+The unique characters present in the string are: [c, l]
+
+
+Enter the String
+khgkhsg
+The unique characters present in the string are: [s]

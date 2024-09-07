@@ -1,0 +1,38 @@
+package Challenge;
+
+import java.util.Scanner;
+
+public class lucky_worker {
+	static int add(int n) {
+		int ad=0;
+		int loop=4;
+		for(int i=0;i<=loop-1;i++) {
+			int g=n%10;
+			ad=ad+g;
+			n=n/10;
+		}
+		return ad;
+	}
+	static void PrimeNum(int sum){
+		int count=0;
+		for(int i=0;i<=sum;i++) {
+			if(sum%i==0) {
+				count++;
+			}
+		}
+		if(count==2) {
+			System.out.println("He is the lucky worker");
+			
+		}
+		else {
+			System.out.println("He is normal one");
+		}
+	}
+public static void main(String[] args) {
+	Scanner sc =new Scanner(System.in);
+	System.out.println("Enter the 6 digit number employee id");
+	int n=sc.nextInt();
+	int sum=add(n);
+	
+}
+}

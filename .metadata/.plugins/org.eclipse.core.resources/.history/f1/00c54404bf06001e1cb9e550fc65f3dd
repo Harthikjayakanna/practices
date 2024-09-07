@@ -1,0 +1,39 @@
+package Pattern;
+
+public class DiamondAB {
+public static void main(String[] args) {
+	int n=9;
+	int star=1;
+	int space=n/2;
+	int s=0;
+	char ch='A';
+	char chw='B';
+	for(int i=1;i<=n;i++) {
+		for(int sp=1;sp<=space;sp++) {
+			System.out.print(" ");
+		}
+		for(int st=1;st<=star;st++) {
+        if(st%2==0) {
+        	System.out.print(s++);
+        }
+        else {
+        	System.out.print(s--);
+        }
+		}
+		
+		if(i<(n/2)+1) {
+			space--;
+			star+=2;
+			
+		}
+		else {
+			space++;
+			star-=2;
+		}
+		
+
+		
+		System.out.println( );
+	}
+}
+}

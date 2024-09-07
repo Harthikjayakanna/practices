@@ -1,0 +1,42 @@
+package Saturday30;
+
+import java.util.Scanner;
+
+public class SumofArmstrongnumber {
+	static Scanner sc=new Scanner(System.in);
+	static int power(int n) {
+		int c=0;
+		while(n>0) {
+			c++;
+			n/=10;
+		}
+		return c;
+	}
+	static void sumofarsmtrong(int n1,int n2) {
+		int total =0;
+		for(int i=n1;i<=n2;i++) {
+			int sum=0;
+			int n=i;
+			int temp=n;
+			int power=power(n);
+			while(n>0) {
+				int last=n/10;
+				int powerdernum=1;
+				for(int j=1;j<=power;j++) {
+					powerdernum*=last;
+				}
+			}
+			if(temp==sum) {
+				total+=temp;
+			}
+		}
+		System.out.println(total);
+	}
+	public static void main(String[] args) {
+		System.out.println("Enter the range for sum of armstrong number (2 number)");
+		int n1=sc.nextInt();
+		int n2=sc.nextInt();
+		sumofarsmtrong(n1,n2);
+	}
+
+}

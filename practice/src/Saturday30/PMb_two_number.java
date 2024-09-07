@@ -1,0 +1,34 @@
+package Saturday30;
+
+import java.util.Scanner;
+
+public class PMb_two_number {
+	static Scanner sc = new Scanner(System.in);
+
+	static void checkprime(int n1, int n2) {
+		
+		
+		for (int i = n1; i <= n2; i++) {
+			int count = 0;
+			 
+			
+			for (int j = 1; j <= i; j++) {
+				if (i % j == 0) {
+					count++;
+				}
+			}
+			
+			
+			if (count == 2) {
+				System.out.print(i + " ");
+			}
+		}
+	}
+
+	public static void main(String[] args) {
+		System.out.println("Enter the Range ( 2 numbers )");
+		int n1 = sc.nextInt();
+		int n2 = sc.nextInt();
+		checkprime(n1, n2);
+	}
+}

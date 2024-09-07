@@ -1,0 +1,24 @@
+package Challenge;
+
+import java.util.Scanner;
+
+public class lucky_worker {
+	static int add(int n) {
+		int ad=0;
+		int loop=4;
+		int g=n%10;
+		int i = 0;
+		while(i<=loop);{
+			ad=ad+g;
+			n=n/10;
+		}
+		return ad;
+	}
+public static void main(String[] args) {
+	Scanner sc =new Scanner(System.in);
+	System.out.println("Enter the 6 digit number employee id");
+	int n=sc.nextInt();
+	int s=add(n);
+	System.out.println(s);
+}
+}

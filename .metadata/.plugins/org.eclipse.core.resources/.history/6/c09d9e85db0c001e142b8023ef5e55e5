@@ -1,0 +1,12 @@
+package Challenge;
+
+import java.util.Scanner;
+
+public class lucky_worker {
+public static void main(String[] args) {
+	Scanner sc =new Scanner(System.in);
+	System.out.println("Enter the 6 digit number employee id");
+	long n=sc.nextLong();
+	
+}
+}

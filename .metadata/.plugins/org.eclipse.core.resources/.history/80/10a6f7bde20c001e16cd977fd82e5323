@@ -1,0 +1,28 @@
+package Challenge;
+
+import java.util.Scanner;
+
+public class taxi_price {
+	static void Price(int ans) {
+		int amnt=20;
+		if(ans<=2) {
+			System.out.println("Ur total amount to pay is "+amnt);
+		}
+		else if(ans>2 && ans<=4) {
+			if(ans==3) {
+				amnt+=20;
+				System.out.println("Ur total amount to pay is "+amnt);
+			}
+			else {
+				amnt+=40;
+				System.out.println("Ur total amount to pay is "+amnt);
+			}
+		}
+	}
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("How many kilometer u have traveled");
+	int ans=sc.nextInt();
+	Price(ans);
+}
+}

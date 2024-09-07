@@ -1,0 +1,25 @@
+package Saturday30;
+
+import java.util.Scanner;
+
+public class PMb_two_number {
+     static Scanner sc=new Scanner(System.in);
+	static void checkprime(int n1,int n2) {
+		int count=0;
+		for(int i=n1;i<=n2;i++) {
+			int n=i;
+			if(n%2==0) {
+				count++;
+			}
+			if(count==2) {
+				System.out.println(n);
+			}
+		}
+	}
+	public static void main(String[] args) {
+			System.out.println("Enter the Range ( 2 numbers )");
+			int n1=sc.nextInt();
+			int n2=sc.nextInt();
+			checkprime(n1, n2);
+		}
+}

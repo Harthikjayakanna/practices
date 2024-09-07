@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class MagicNumber {
+	static void Magic(int num) {
+		int sum=0;
+		do {
+		while(num>0) {
+			int last=num%10;
+			sum+=last;
+		}
+		num=sum;
+		}while(sum>10);
+		System.out.println(sum);
+		
+		if(sum==1)
+			System.out.println("Magic number");
+		else
+			System.out.println("Not a magic number");
+	}
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int num=sc.nextInt();
+		Magic(num);
+	}
+
+}
